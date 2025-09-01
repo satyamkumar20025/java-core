@@ -6,7 +6,7 @@ public class questions2 {
 	public static void main(String[] args)
 	{
 		 Scanner sc = new Scanner(System.in);
-				System.out.print("Enter the any digit :");
+				System.out.print("Enter the any hidht of  solid diamond :");
 		         int n1 = sc.nextInt();
 		       for( int i=1;i<=n1; i++)
 		          {
