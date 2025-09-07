@@ -3,11 +3,11 @@ package exception_handling;
 import java.util.Scanner;
 
 public class Bank {
-	int acc_no;
-	String name,bra,Enter;
-	float add;
-	float current,curr;
-	float  with,pre;
+	private int acc_no;
+	private String name,bra,Enter;
+	private float add;
+	private float current,curr;
+	private float  with,pre;
 	
 
 	 void input()
