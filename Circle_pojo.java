@@ -15,11 +15,11 @@ public class Circle {
 	}
 	 void calculate_circle()
 	 { 
-		 area=Math.PI*r*r;
+		 area=(float)Math.PI*r*r;
 	 }
 	 void calculate_perimeter()
 	 {
-       perim=2*Math.PI*r;		 
+       perim=2*(float)Math.PI*r;		 
 	 }
 	 void display()
 	 {
