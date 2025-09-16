@@ -2,7 +2,7 @@ package Function;
 
 import java.util.Scanner;
 
-public class airline_reservation {
+public class Airline_reservation {
 
 	private String passenger_name,name;
 	private int flightno;
@@ -11,7 +11,6 @@ public class airline_reservation {
 	private int cancel;
 	private int totalseat=50;
 	private int tickets;
-
 	private double ticket_price;
 
 	void input()
@@ -33,32 +32,31 @@ public class airline_reservation {
     		System.out.print("Enter the number of person :");
     		person=sc.nextInt();
     		
-                if(ticket_price==2000)
+                if(ticket_price>2000)
                 {
                 	ticket_price=ticket_price*person;
-            		System.out.print("ECONOMY CLASS :"+ticket_price);
+            		System.out.println("ECONOMY CLASS :"+ticket_price);
 
                 }
                 else if(ticket_price>5000)
                 {
                 	ticket_price=ticket_price*person;
-            		System.out.print("BUSINESS CLASS :"+ticket_price);
+            		System.out.println("BUSINESS CLASS :"+ticket_price);
 
                 }
                 else if(ticket_price>10000)
                 {
                 	ticket_price=ticket_price*person;
-            		System.out.print("FIRST CLASS :"+ticket_price);
+            		System.out.println("FIRST CLASS :"+ticket_price);
                 }
       		
       }
       void bookticket()
       {
         Scanner sc=new Scanner (System.in);
-  		System.out.print("WELCOME TO TICKET BOOKING SYSTEM:");
-		System.out.print("TOTAL SEAT AVAILABLE :"+totalseat);
-		System.out.print("ENTER THE YOUR NAME :");
-		sc.nextLine();
+  		System.out.println("WELCOME TO TICKET BOOKING SYSTEM:");
+		System.out.println("TOTAL SEAT AVAILABLE :"+totalseat);
+		System.out.println("ENTER THE YOUR NAME :");
 		name=sc.nextLine();
 		System.out.print("HOW MANY TICKETS DO YOU WANT TO BOOKING :");
 		 tickets=sc.nextInt();
@@ -75,32 +73,29 @@ public class airline_reservation {
            }
 
       }
-      void cancel()
+      void iscancel()
       {
-        Scanner sc=new Scanner (System.in);
-  		System.out.print("HOW MANY TICKETS DO YOU WANT TO CANCEL :");
-         cancel =sc.nextInt();
-         
-         cancel=cancel-tickets;
-   		System.out.print("TICKET CANCEL SUCCESSFUL :"+cancel);
-
+    	  totalseat += cancel;
+    	  tickets -= cancel;
+    	  System.out.println("TICKET CANCEL SUCCESSFUL: " + cancel);
+    	  System.out.println("Remaining seats: " + totalseat);
       }
       
      void display()
   	{
-  		System.out.println("CUSTOMER PRODUCT NAME:"+passenger_name);
-  		System.out.println("PRODUCT PRICE :"+seatno);
-  		System.out.println("PRODUCT QUANTITY:"+flightno);
-  		System.out.println("PAYMENT:"+totalseat);
+  		System.out.println("PASSENGER NAME:"+passenger_name);
+  		System.out.println("SEAT NO :"+seatno);
+  		System.out.println("FLIGHT NO:"+flightno);
+  		System.out.println("TOTAL SEATS:"+totalseat);
   		
   		}
   	
   		public static void main(String[] args) {
-  			airline_reservation s1=new  airline_reservation();
+  			Airline_reservation s1=new  Airline_reservation();
   			s1.input();
   			s1.calculate(); 
   			s1.bookticket();
-  			s1.cancel();
+  			s1.iscancel();
   			s1.display();
   		}
   }
