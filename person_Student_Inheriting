@@ -1,18 +1,18 @@
 package Single_Inheritance_Question;
 
 // Base class
-class person_Student {
+class Person {
     String name;
     int age;
 
-    public person_Student(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 }
 
 // Derived class
-class Student extends person_Student {
+class Student extends Person {
     int rollNo;
     String course;
 
