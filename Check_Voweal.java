@@ -6,7 +6,7 @@ import java.util.Scanner;
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter the check character:");
+		System.out.print("Enter the character:");
 		char num = sc.next().charAt(0);
 		 
 		if(num == 'a'|| num == 'e'|| num == 'i'	|| num == 'o' || num == 'u')
